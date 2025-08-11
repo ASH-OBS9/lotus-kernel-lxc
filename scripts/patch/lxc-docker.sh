@@ -28,11 +28,11 @@ apply_patch() {
 }
 
 ## Source: https://github.com/wu17481748/android-lxc-docker
-# apply_patch $LXC_PATCHES/cgroup.patch kernel/cgroup.c
-apply_patch $LXC_PATCHES/cgroup.patch kernel/cgroup/cgroup.c
+apply_patch $LXC_PATCHES/cgroup.patch kernel/cgroup.c
+# apply_patch $LXC_PATCHES/cgroup.patch kernel/cgroup/cgroup.c
 
 ## Source: https://gist.github.com/FreddieOliveira/efe850df7ff3951cb62d74bd770dce27#41-kernel-patches
-apply_patch $LXC_PATCHES/xt_qtaguid.patch net/netfilter/xt_qtaguid.c
+# apply_patch $LXC_PATCHES/xt_qtaguid.patch net/netfilter/xt_qtaguid.c
 
 ## Source: https://github.com/CGCL-codes/Android-Container
 # apply_patch $LXC_PATCHES/mm.patch include/linux/mm.h
