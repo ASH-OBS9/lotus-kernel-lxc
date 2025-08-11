@@ -13,6 +13,11 @@ jobs:
       CCACHE_HARDLINK: "true"
     steps:
     - uses: actions/checkout@v4
+    - name: Prepend /bin and /sbin to PATH
+      run: |
+        export PATH=/bin:/sbin:$PATH
+        echo "PATH set to: $PATH"
+        
     - name: Prepare Configuration
       run: |
         CONFIG_ENV=$(cat config.env | grep -w "CONFIG_ENV" | head -n 1 | cut -d "=" -f 2)
