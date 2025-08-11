@@ -125,6 +125,8 @@ jobs:
             wget -O clang.zip ${{ env.CUSTOM_CLANG_SOURCE }}
             mkdir tool
             unzip clang.zip -d tool/
+            cd ./tool
+            mv *-ndk-* NDK
         fi
 
 
